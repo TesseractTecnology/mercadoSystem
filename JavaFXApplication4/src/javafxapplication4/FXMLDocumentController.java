@@ -6,6 +6,9 @@
 package javafxapplication4;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,10 +25,10 @@ public class FXMLDocumentController implements Initializable {
     private Label label;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!"); 
-        System.out.println("Hello");
+    private void handleButtonAction(ActionEvent event) throws SQLException {
+        
+     
+        
     }
     
     @Override
