@@ -27,6 +27,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) throws SQLException {
         
+        System.out.println(ConexaoMySql.getConexaoMySql());
+        System.out.println(ConexaoMySql.statusConection());
+        
+        
         
         
     }

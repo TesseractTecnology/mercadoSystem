@@ -37,7 +37,7 @@ public class ConexaoMySql {
                 String driverName = "com.mysql.jdbc.Driver"; 
                 Class.forName(driverName);
                 
-                String serverName = "54.232.199.237";
+                String serverName = "54.232.199.237:3306";
                 String mydatabase = "mysql";
                 String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
                 String username = "admin";
