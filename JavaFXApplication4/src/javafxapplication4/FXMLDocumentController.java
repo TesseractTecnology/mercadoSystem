@@ -35,13 +35,14 @@ public class FXMLDocumentController implements Initializable {
         ConexaoMySql con = new ConexaoMySql();
         
         Statement st = con.conexao.createStatement();
+        String sql = "INSERT INTO usuarios (USUARIOS,NOME,SENHA) VALUES ('sadasd','dasdasda','565454')";
         
-        st.executeQuery("Select * from usuarios");
+        st.execute(sql);
         
-        ResultSet rs = st.getResultSet();
+       /* ResultSet rs = st.getResultSet();
         while (rs.next()){
             System.out.println(rs.getString("nome"));
-        }
+        } */
     }
     
     @Override
