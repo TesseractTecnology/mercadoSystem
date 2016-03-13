@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 import java.sql.SQLException;
+import java.sql.Statement;
 
 
 /**
@@ -20,81 +21,15 @@ import java.sql.SQLException;
  */
 public class ConexaoMySql {
     
+    String serverName = "54.232.199.237:3306";
+    String mydatabase = "sys";
+    String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
+    String username = "admin";
+    String password = "admin";
+    Connection conexao;
+   
+   ConexaoMySql() throws SQLException{ 
+       conexao = DriverManager.getConnection(url, username, password);
+   }
     
-    
-    public static String status = "Não conectou...";
-    
-        public ConexaoMySql() {
-
-        }
-        
-        public static java.sql.Connection getConexaoMySql()  {
-            
-            Connection connection = null; 
-            
-            try { 
-            
-                String driverName = "com.mysql.jdbc.Driver"; 
-                Class.forName(driverName);
-                
-                String serverName = "54.232.199.237:3306";
-                String mydatabase = "mysql";
-                String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
-                String username = "admin";
-                String password = "admin";
-                
-                connection = DriverManager.getConnection(url, username, password);
-                
-                
-                
-                
-                
-                if (connection != null) {
-                    
-                    status = ("STATUS--->Conectado com sucesso!");
-                
-                } else { 
-                 
-                    status = ("Status ---> Não foi possivel realizar conexão");
-                    
-                }
-                
-                return connection;
-                
-            } catch (ClassNotFoundException e) {
-                
-                System.out.println("O driver expecificado nao foi encontrado.");
-                
-                return null;
-            } catch (SQLException e) {
-                
-                System.out.println("Nao foi possivel conectar ao Banco de Dados.");
-                
-                return null;
-
-            }
-
-         
-    }    
-        public static String statusConection() { 
-            
-            return status; 
-        }
-        
-        public static boolean FecharConexao() {
-        
-            try {
-                ConexaoMySql.getConexaoMySql().close();
-                return true; 
-                
-            } catch (SQLException e) {
-                
-                return false;
-            }
-            
-        }
-        
-        
-
-        
 }
