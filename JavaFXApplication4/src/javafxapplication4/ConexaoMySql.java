@@ -45,6 +45,10 @@ public class ConexaoMySql {
                 
                 connection = DriverManager.getConnection(url, username, password);
                 
+                
+                
+                
+                
                 if (connection != null) {
                     
                     status = ("STATUS--->Conectado com sucesso!");
@@ -89,6 +93,8 @@ public class ConexaoMySql {
             }
             
         }
+        
+        
 
         
 }
