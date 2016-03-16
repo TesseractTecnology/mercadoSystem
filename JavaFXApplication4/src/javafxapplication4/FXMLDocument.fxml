@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="705.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="javafxapplication4.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.FXMLDocumentController">
     <children>
         <Button fx:id="button" layoutX="601.0" layoutY="432.0" onAction="#handleButtonAction" text="Click Me!" />
         <Label fx:id="label" layoutX="89.0" layoutY="132.0" minHeight="16" minWidth="69" />
@@ -36,9 +36,9 @@
             </Menu>
         </menus>
       </MenuBar>
-      <TextField layoutX="131.0" layoutY="182.0" prefHeight="25.0" prefWidth="181.0" />
-      <TextField layoutX="131.0" layoutY="235.0" prefHeight="25.0" prefWidth="181.0" />
-      <TextField layoutX="131.0" layoutY="283.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="nome" layoutX="131.0" layoutY="182.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="usuario" layoutX="131.0" layoutY="235.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="senha" layoutX="131.0" layoutY="283.0" prefHeight="25.0" prefWidth="181.0" />
       <TextField layoutX="131.0" layoutY="335.0" prefHeight="25.0" prefWidth="181.0" />
       <TextField layoutX="398.0" layoutY="182.0" prefHeight="25.0" prefWidth="181.0" />
       <TextField layoutX="398.0" layoutY="235.0" prefHeight="25.0" prefWidth="181.0" />
@@ -47,8 +47,8 @@
       <Accordion layoutX="57.0" layoutY="57.0" />
       <Separator layoutX="-6.0" layoutY="417.0" prefHeight="3.0" prefWidth="705.0" />
       <Label layoutX="199.0" layoutY="165.0" text="Nome:" />
-      <Label layoutX="185.0" layoutY="266.0" text="Fornecedor:" />
-      <Label layoutX="194.0" layoutY="213.0" text="Produto:" />
+      <Label layoutX="185.0" layoutY="266.0" text="Senha" />
+      <Label layoutX="194.0" layoutY="213.0" text="Usuario" />
       <Label layoutX="442.0" layoutY="318.0" text="Código de barras:" />
       <Separator layoutY="139.0" prefHeight="3.0" prefWidth="705.0" />
       <Label layoutX="446.0" layoutY="266.0" text="Data de entrada" />
@@ -65,5 +65,6 @@
             <Image url="https://cdn1.iconfinder.com/data/icons/flat-artistic-shopping/32/shopping-add-128.png" />
          </image>
       </ImageView>
+      <ToggleButton layoutX="393.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnToogle" text="ToggleButton" />
     </children>
 </AnchorPane>
